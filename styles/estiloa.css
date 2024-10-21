@@ -53,6 +53,8 @@ body {
   }
   .caixamenorb {
     width: 60%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 @media (max-width: 600px) {
