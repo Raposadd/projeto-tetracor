@@ -1,0 +1,50 @@
+body {
+  margin: 0%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.barrasuperior {
+  border-bottom: 1px solid grey;
+  padding-left: 3%;
+}
+.caixamaior {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.caixamenor {
+  margin-left: 30%;
+  margin-right: auto;
+  font-size: xx-large;
+}
+.caixamenor h1 {
+  color: black;
+}
+.caixamenor h2 {
+  font-size: large;
+  color: rgb(66, 66, 66);
+}
+.caixamenorb {
+  width: 30%;
+  margin: 0 auto;
+}
+.caixamaiorb {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  .caixamaiorb {
+    flex-direction: column;
+  }
+  .caixamenorb {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+    .caixamenor h1 {
+        font-size:2rem;
+    }
+    .caixamenor h2 {
+        font-size: medium;
+    }
+}
