@@ -41,6 +41,9 @@ body {
   }
 }
 @media (max-width: 600px) {
+    .caixamenor {
+        width: 15%;
+    }
     .caixamenor h1 {
         font-size:2rem;
     }
