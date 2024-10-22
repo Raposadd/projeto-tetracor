@@ -11,8 +11,35 @@ body {
 }
 .barrasuperior {
   color: purple;
+  display: flex;
+  align-items: center;
   border-bottom: 2px solid purple;
   padding-left: 3%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 30px;
+  padding: 0;
+}
+.menu li {
+  margin: 0 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+#logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 .caixamaior {
   padding-top: 5%;
