@@ -7,6 +7,7 @@ body {
   margin: 0%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
+  overflow: hidden;
 }
 
 .barrasuperior {
@@ -21,6 +22,7 @@ body {
   display: flex;
   align-items: end;
   margin-left: auto;
+  
 }
 .menu a {
   display: flex;
@@ -30,6 +32,7 @@ body {
   color: inherit;
   float: right;
   transition: text-shadow 0.2s ease-in-out;
+  
 }
 
 .menu a:hover{
