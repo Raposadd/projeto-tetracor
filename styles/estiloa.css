@@ -1,33 +1,29 @@
 :root {
   /* A cor abaixo foi selecionada especialmente pela nossa designer cabeçuda */
-  --corprincipal: #8C52FF; 
+  --corprimaria: #8c52ff;
   /* Cor secundária */
-  
 }
 body {
   margin: 0%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
 }
-.blocodaintro {
-  border-bottom: 2px solid var(--corprincipal);
+.caixaintroalpha {
+  border-bottom: 2px solid var(--corprimaria);
 }
-.accent {
-  color: var(--corprincipal);
-}
+
 .barrasuperior {
-  color: var(--corprincipal);
+  color: var(--corprimaria);
   display: flex;
   align-items: center;
-  border-bottom: 2px solid var(--corprincipal);
+  border-bottom: 2px solid var(--corprimaria);
   padding-left: 3%;
 }
 
 .menu {
   display: flex;
-  align-items:end;
+  align-items: end;
   margin-left: auto;
-  
 }
 .menu a {
   display: flex;
@@ -43,62 +39,61 @@ body {
   height: 40px;
   margin-right: 10px;
 }
-.caixamaior {
+.caixaintrobeta {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.caixamenor {
+.caixaintrodelta {
   margin-left: 30%;
   margin-right: auto;
   font-size: xx-large;
 }
-.caixamenor h1 {
+.caixaintrodelta h1 {
   color: black;
 }
-.caixamenor h2 {
+.caixaintrodelta h2 {
   font-size: large;
   color: rgb(66, 66, 66);
 }
-.cartaomodelo {
+.cartao {
   width: 30%;
   margin: 0 auto;
-  border-top: 2px solid var(--corprincipal);
-  border-bottom: 2px solid var(--corprincipal);
+  border-top: 2px solid var(--corprimaria);
+  border-bottom: 2px solid var(--corprimaria);
   border-radius: 10px;
   padding-left: 2%;
   gap: 3px;
   margin-bottom: 2%;
   transition-duration: box-shadow 1.5s;
 }
-.caixamaiorb {
+.cartao:hover {
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.425);
+}
+.caixartigos {
   display: flex;
   flex-direction: row;
   margin-top: 5%;
 }
 
 @media (max-width: 500px) {
-  .caixamaiorb {
+  .caixartigos {
     flex-direction: column;
   }
-  .cartaomodelo {
+  .cartao {
     width: 70%;
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 @media (max-width: 600px) {
-  .caixamenor {
+  .caixaintrodelta {
     margin: auto;
     width: 50%;
   }
-  .caixamenor h1 {
+  .caixaintrodelta h1 {
     font-size: 2rem;
   }
-  .caixamenor h2 {
+  .caixaintrodelta h2 {
     font-size: medium;
   }
-}
-
-.cartaomodelo:hover {
-  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.425);
 }
