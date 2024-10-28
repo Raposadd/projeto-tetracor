@@ -1,20 +1,28 @@
 :root {
   /* A cor abaixo foi selecionada especialmente pela nossa designer cabeçuda */
   --corprimaria: #8c52ff;
+  --corsecundaria: #52FF8C; 
+  --corterciaria: rgb(74, 17, 105) ;
+  --corquaternaria: #FF8C52;
+  --cordefundo: rgb(27, 27, 27);
+  --cordefundocartao:rgb(34, 34, 34);
+  --cortexto: rgb(169, 169, 169);
+  --gradiente: linear-gradient(var(--corterciaria), var(--corprimaria), var(--corsecundaria));
   /* Cor secundária */
 }
 body {
   margin: 0%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
+  background-color: var(--cordefundo);
+  color: var(--cortexto);
 }
 .navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
-  border-bottom: 2px solid var(--corprimaria);
+  background-color: var(--cordefundocartao);
+  border-bottom: 2px solid var(--cortexto);
 }
 
 .navbar li {
@@ -23,7 +31,7 @@ body {
 
 .navbar li a {
   display: block;
-  color: var(--corprimaria);
+  color: var(--cortexto);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -36,10 +44,18 @@ body {
 .caixaintro {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid var(--corprimaria);
+  border-bottom: 1px solid var(--cortexto);
+  padding: 20px;
 }
 .subcaixaintro {
-  font-size: xx-large;
+  font-size: larger;
+}
+.subcaixaintro h1 {
+  font-size: 3rem;
+  background-image: var(--gradiente);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  
 }
 .caixartigos {
   display: flex;
@@ -52,6 +68,40 @@ body {
   width: 30%;
   min-width: 230px;
   padding: 10px;
-  border: 1px solid var(--corprimaria);
+  border: 1px solid var(--cortexto);
   border-radius: 10px;
+  background-color: var(--cordefundocartao);
+  z-index: 0;
+}
+.cartao h1 {
+  background-image: var(--gradiente);
+  background-clip: text;
+  color: rgb(0, 0, 0, 0);
+}
+.botao {
+  color: var(--cortexto);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+  position: relative;
+  background: var(--cordefundocartao);
+  font-size: medium;
+}
+.botao::after{
+  content: '';
+  position: absolute;
+  height: 107%;
+  width: 103%;
+  background: linear-gradient(to bottom right,var(--corquaternaria), var(--corsecundaria));
+  border-radius: 200px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+}
+.botao:hover {
+  z-index: 0;
+  color: black;
+  border: none;
 }
