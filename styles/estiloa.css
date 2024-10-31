@@ -16,25 +16,31 @@ body {
   background-color: var(--cordefundo);
   color: var(--cortexto);
 }
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+nav {
+  display: grid;
+  grid-template-columns: auto auto; 
   overflow: hidden;
   background-color: var(--cordefundocartao);
   border-bottom: 2px solid var(--cortexto);
+  margin: 0;
+  padding: 0;
+}
+.nav-bar-right {
+  display: flex;
+  justify-contents: end;
 }
 
-.navbar li {
-  float: left;
+.nav-bar-right ul{
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  justify-contents: end;
+  align-items: center;
 }
-
-.navbar li a {
-  display: block;
-  color: var(--cortexto);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.nav-bar-left {
+  display: flex;
+  justify-contents: start;
+  align-items: center;
 }
 #logo {
   width: 40px;
