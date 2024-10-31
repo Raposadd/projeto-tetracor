@@ -34,12 +34,12 @@ nav {
   list-style-type: none;
   display: flex;
   gap: 10px;
-  justify-contents: end;
+  justify-content: end;
   align-items: center;
 }
 .nav-bar-left {
   display: flex;
-  justify-contents: start;
+  justify-content: start;
   align-items: center;
 }
 #logo {
