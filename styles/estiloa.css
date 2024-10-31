@@ -1,52 +1,60 @@
 :root {
   /* A cor abaixo foi selecionada especialmente pela nossa designer cabeçuda */
   --corprimaria: #8c52ff;
-  --corsecundaria: #52FF8C; 
-  --corterciaria: rgb(74, 17, 105) ;
-  --corquaternaria: #FF8C52;
-  --cordefundo: rgb(27, 27, 27);
-  --cordefundocartao:rgb(34, 34, 34);
-  --cortexto: rgb(169, 169, 169);
-  --gradiente: linear-gradient(var(--corterciaria), var(--corprimaria), var(--corsecundaria));
+  --corsecundaria: #52ff8c;
+  --corterciaria: rgb(74, 17, 105);
+  --corquaternaria: #c491fd;
+  --cordefundo: rgb(0, 0, 0);
+  --cordefundocartao: rgb(0, 0, 0);
+  --cortexto: rgb(255, 255, 255);
+  --gradiente: linear-gradient(
+    var(--corterciaria),
+    var(--corprimaria),
+    var(--corsecundaria)
+  );
   /* Cor secundária */
 }
 body {
   margin: 0%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--cordefundo);
   color: var(--cortexto);
 }
 nav {
   display: grid;
-  grid-template-columns: auto auto; 
+  grid-template-columns: auto auto;
   overflow: hidden;
-  background-color: var(--cordefundocartao);
-  border-bottom: 2px solid var(--cortexto);
-  margin: 0;
-  padding: 0;
+  background-color: #2e2e2e;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .nav-bar-right {
-  display: flex;
-  justify-contents: end;
+  padding-right: 16px;
 }
-
-.nav-bar-right ul{
-  list-style-type: none;
+.nav-bar-right ul {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  list-style-type: none;
   justify-content: end;
-  align-items: center;
+}
+.nav-bar-right a {
+  text-decoration: none;
+  color: var(--cortexto);
+}
+.nav-bar-right a:hover {
+  color: grey;
 }
 .nav-bar-left {
   display: flex;
-  justify-content: start;
-  align-items: center;
+  padding-left: 16px;
 }
 #logo {
   width: 40px;
+  height: 40px;
   margin-left: 10px;
 }
-
 .caixaintro {
   display: flex;
   justify-content: center;
@@ -61,7 +69,6 @@ nav {
   background-image: var(--gradiente);
   background-clip: text;
   color: rgba(0, 0, 0, 0);
-  
 }
 .caixartigos {
   display: flex;
@@ -72,17 +79,18 @@ nav {
 .cartao {
   flex-grow: 1;
   width: 30%;
-  min-width: 230px;
+  min-width: 248px;
   padding: 10px;
   border: 1px solid var(--cortexto);
-  border-radius: 10px;
-  background-color: var(--cordefundocartao);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(9px);
   z-index: 0;
 }
 .cartao h1 {
-  background-image: var(--gradiente);
-  background-clip: text;
-  color: rgb(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  font-weight: 500;
 }
 .botao {
   color: var(--cortexto);
@@ -94,12 +102,16 @@ nav {
   background: var(--cordefundocartao);
   font-size: medium;
 }
-.botao::after{
-  content: '';
+.botao::after {
+  content: "";
   position: absolute;
   height: 107%;
   width: 103%;
-  background: linear-gradient(to bottom right,var(--corquaternaria), var(--corsecundaria));
+  background: linear-gradient(
+    to bottom right,
+    var(--corquaternaria),
+    var(--corsecundaria)
+  );
   border-radius: 200px;
   top: 50%;
   left: 50%;
@@ -111,8 +123,28 @@ nav {
   color: black;
   border: none;
 }
-.botao:active{
+.botao:active {
   z-index: 0;
   color: black;
   border: none;
+}
+
+@media (max-width: 570px) {
+  nav {
+    grid-template-columns: auto;
+  }
+  .nav-bar-left {
+    justify-content: center;
+    padding: 0px;
+  }
+  #logo {
+    margin: 0px;
+  }
+  .nav-bar-right {
+    padding: 0px;
+  }
+  .nav-bar-right ul {
+    justify-content: center;
+    padding: 0px;
+  }
 }
